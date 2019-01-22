@@ -23,7 +23,7 @@ def lookup(ip):
         socket.gethostbyaddr(ip)
     except socket.herror:
         return None
-    obj = IPWhois(ip)
+    obj = ipwhois.IPWhois(ip)
     return obj.lookup_whois()
 
 
